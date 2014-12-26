@@ -188,6 +188,10 @@ case "$1" in
 	echo PRODUCT_NAME=rpi >> .tmp-config &&
 	repo_sync $1
 	;;
+"G510")
+	echo DEVICE=$1 >> .tmp-config &&
+	repo_sync $1
+	;;
 
 *)
 	echo "Usage: $0 [-cdflnq] (device name)"
@@ -228,6 +232,7 @@ case "$1" in
 	echo - emulator-x86
 	echo - emulator-x86-jb
 	echo - emulator-x86-kk
+	echo - G510
 	exit -1
 	;;
 esac
